@@ -2,9 +2,8 @@ FROM google/cloud-sdk:220.0.0-alpine
 
 ENV HELM_VERSION="v2.9.1"
 
-RUN mkdir /home/circleci/
-RUN mkdir /home/circleci/projet
-WORKDIR /home/circleci/projet
+RUN mkdir /root/project
+WORKDIR /root/project
 
 RUN apk add openssl docker && \
     curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash -s -- --version ${HELM_VERSION} && \
