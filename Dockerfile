@@ -3,6 +3,7 @@ FROM google/cloud-sdk:220.0.0-alpine
 ENV HELM_VERSION="v2.9.1"
 
 RUN mkdir /root/project
+RUN chmod -777 /root/project
 WORKDIR /root/project
 
 RUN apk add openssl docker && \
